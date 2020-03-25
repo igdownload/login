@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="ico.ico" type = "image/x-icon">
+<link rel="stylesheet" href="css1.css">
+<link rel="stylesheet" href="cssdlg.css">
+<script type="text/javascript" src="my.js"></script>
+<title>LOGIN</title>
+</head>
+<body>
+
+<script>
+check_login();
+</script>
+
+<div id="dlgo" class="dlgover">
+	<div id="dlg" class="dlgbox">
+		<div class="dlgdiv">Select one of the two option : </div>
+		<div class="navbar3">
+			<a class="al" href="https://sites.google.com" target="_blank">Feedback Form</a>
+			<a class="ar" onclick="javascript:myfun2();">Feedback Here</a>
+		</div>
+	</div>
+</div>
+
+<div class="navbar">
+  <a class="active" href="login.html"> LOGIN</a> 
+  <a href="create.html"> REGISTER</a> 
+  <a href="forget.html"> FORGOT PASSWORD</a> 
+  <a href="javascript:myfun1();"> CONTACT ME</a>
+  <a href="javascript:close_win();">EXIT</a>
+</div>
+
+<div class="flex-container">
+  <div class="box1">
+	<form action="javascript:validate();" Id="login">
+		<fieldset>
+			<legend>LOGIN</legend>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="un">Username :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="text" id="un" maxlength=8 placeholder="Username" required autofocus>
+    				</div>
+  			</div>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="pwd">Password :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="password" id="pwd" maxlength=20 placeholder="Password" required>
+    				</div>
+  			</div>
+			<div class="row">
+				<div class="button">
+    					<input type="submit" value="LOGIN">
+				</div>
+ 			</div>
+			<div class="row">
+    				<div class="navbar2">
+      					<a class="link1" href="forget.html">Forgot Password?</a>
+					<a class="link2" href="create.html">Register Here</a>
+    				</div>
+  			</div>
+		</fieldset>		
+	</form>
+  </div>
+  <div class="box2">
+	<div class="over"></div>
+	<p class="or">OR</p>
+  </div>
+  <div class="box3">
+	<form Id="extra">
+		<fieldset>
+			<legend class="custom">DELETE ACCOUNT(S)</legend>
+			<div class="row">
+				<div class="button">
+    					<input type="button" value="DELETE ALL ACCOUNTS" onclick="javascript:delete_all();">
+				</div>
+ 			</div>
+			<div class="row">
+				<div class="button">
+    					<input type="button" value="DELETE SINGLE ACCOUNT" onclick="javascript:proc();">
+				</div>
+ 			</div>
+		</fieldset>		
+	</form>
+  </div>
+</div>
+</body>
+</html>
