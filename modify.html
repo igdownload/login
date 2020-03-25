@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="ico.ico" type = "image/x-icon">
+<script type="text/javascript" src="my.js"></script>
+<title>Modify Profile</title>
+<style>
+* {box-sizing: border-box;}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  border-radius:50%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(224,224,224,0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  height:100%;
+  border-radius:50%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 30px;
+  padding-top: 85px;
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.8;
+}
+.container:hover .overlay {
+  opacity: 1;
+  cursor:pointer;
+}
+.dropdown {
+	float:right;
+}
+.dropimg {
+	border-radius:50%;
+	height:75px;
+	width:75px;
+}
+.dropimg:hover {
+	cursor:pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right:0;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  font-size:20;
+  text-decoration: none;
+  display: block;
+  cursor:pointer;
+}
+</style>
+</head>
+<body background="bg1.png">
+<div class="dropdown">
+	<img src="usr.png" id="fimg" alt="USER" class="dropimg" onclick="javascript:myfun();">
+	<div class="dropdown-content" id="d_c">
+		<a href="html.html">Dashboard</a>
+		<a href="modify.html">My Profile</a>
+		<a href="javascript:logout();">Logout</a>
+	</div>
+</div>
+<p align="right">
+<div id="welcome" style="font-size:30; text-align:right;"></div>
+</p>
+<div id="main" style="width: 60%; height:280px; margin-left:20%; margin-right:20%;">
+	<h1 style="margin-top: 20"><center>MODIFY YOUR ACCOUNT</center></h1>
+	<form style="border: 3px solid cyan;" action="javascript:modify_p();" Id="modify_acc">
+	<br> 
+	<center>
+	<div class="container">
+		<img src="usr.png" id="usrimg1" alt="User Image" class="image">
+		<div class="overlay" onclick="javascript:upload_image();" style="text-decoration:none; color: #a607f5; font-weight: 600;">Change Picture</div>
+	</div>
+	</center>
+	<br><img src="" hidden id="usrimg2">
+	<p align="center"><font size=5 color="blue">Username<span style="display:inline-block; width: 62;"></span>: <input style="font-size: 20;" type="text" maxlength=8 Id="unp" 	placeholder="Username" required autofocus></font></p>
+	<p align="center"><font size=5 color="blue">Password<span style="display:inline-block; width: 64;"></span>: <input style="font-size: 20;" type="password" maxlength=20 Id="pwdp" 	placeholder="Passwords" required></font></p>
+	<p align="center"><font size=5 color="blue">Security Phrase   : <input style="font-size: 20;" type="text" maxlength=5 Id="spp" placeholder="Security Phrase" required></font></p><br>
+	<input type="file" accept="image/*" Id="upusrimgp" onchange="readURL1(this);" hidden></font><br>
+	<center><div style="position:relative; padding-bottom:5%;">
+		<button Id="sub" type="submit" style="cursor:pointer; color:white; background-color:blue; font-size: 25px;">SAVE CHANGES</button><br><br>
+		<a href="javascript:delete_acc();" style="text-decoration:none; font-size:25px;">Delete Your Account</a>
+	</div>
+	</center>
+	</form>
+<script>
+if(dataImage!="default")
+{
+	var userImg = document.getElementById('usrimg1');
+	userImg.src = "data:image/png;base64," + dataImage;
+}
+function upload_image()
+{
+	document.getElementById("upusrimgp").click();
+}
+document.getElementById('usrimg2').src = document.getElementById('usrimg1').src
+get_data();
+</script>
+<script>
+logged_name();
+function myfun()
+{
+	document.getElementById("d_c").style.display="block";
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropimg')) {
+    	document.getElementById("d_c").style.display="none";
+  }
+}
+</script>
+</div>
+</body>
+</html>
+

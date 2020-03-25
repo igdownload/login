@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="ico.ico" type = "image/x-icon">
+<link rel="stylesheet" href="css2.css">
+<link rel="stylesheet" href="cssdlg.css">
+<script type="text/javascript" src="my.js"></script>
+<title>REGISTER</title>
+</head>
+<body>
+
+<script>
+check_login();
+</script>
+
+<div id="dlgo" class="dlgover">
+	<div id="dlg" class="dlgbox">
+		<div class="dlgdiv">Select one of the two option : </div>
+		<div class="navbar3">
+			<a class="al" href="https://sites.google.com" target="_blank">Feedback Form</a>
+			<a class="ar" onclick="javascript:myfun2();">Feedback Here</a>
+		</div>
+	</div>
+</div>
+
+<div class="navbar">
+  <a href="login.html"> LOGIN</a> 
+  <a class="active" href="create.html"> REGISTER</a> 
+  <a href="forget.html"> FORGOT PASSWORD</a> 
+  <a href="javascript:myfun1();"> CONTACT ME</a>
+  <a href="javascript:close_win();">EXIT</a>
+</div>
+
+<div class="flex-container">
+  <div class="box">
+	<form action="javascript:create_ac();" Id="create_acc">
+		<fieldset>
+			<legend>REGISTER</legend>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="un">Username* :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="text" id="un" maxlength=8 placeholder="Username" required autofocus>
+    				</div>
+  			</div>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="pwd">Password* :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="password" id="pwd" maxlength=20 placeholder="Password" required>
+    				</div>
+  			</div>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="sp">Security Phrase* :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="text" id="sp" maxlength=5 placeholder="Security Phrase" required>
+    				</div>
+  			</div>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="upusrimg">Account Image :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="file" id="upsurimg" maxlength=5 placeholder="Security Phrase" accept="image/*" onchange="readURL(this);">
+    				</div>
+  			</div>
+			<div class="row">
+				<img src="" hidden id="usrimg">
+				<img src="" hidden id="dispimg"> 
+ 			</div>
+			<div class="row">
+				<div class="button">
+    					<input type="submit" value="REGISTER">
+				</div>
+ 			</div>
+			<div class="row">
+    				<div class="navbar2">
+      					Already registered, <a class="link1" href="login.html">Login Here</a><br>
+					Forgot your password, <a class="link2" href="forget.html">Change Here</a>
+    				</div>
+  			</div>
+		</fieldset>		
+	</form>
+  </div>
+</div>
+</body>
+</html>

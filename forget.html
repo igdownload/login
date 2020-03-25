@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="ico.ico" type = "image/x-icon">
+<link rel="stylesheet" href="css3.css">
+<link rel="stylesheet" href="cssdlg.css">
+<script type="text/javascript" src="my.js"></script>
+<title>FORGOT PASSWORD</title>
+</head>
+<body>
+
+<script>
+check_login();
+</script>
+
+<div id="dlgo" class="dlgover">
+	<div id="dlg" class="dlgbox">
+		<div class="dlgdiv">Select one of the two option : </div>
+		<div class="navbar3">
+			<a class="al" href="https://sites.google.com" target="_blank">Feedback Form</a>
+			<a class="ar" onclick="javascript:myfun2();">Feedback Here</a>
+		</div>
+	</div>
+</div>
+
+<div class="navbar">
+  <a href="login.html"> LOGIN</a> 
+  <a href="create.html"> REGISTER</a> 
+  <a class="active" href="forget.html"> FORGOT PASSWORD</a> 
+  <a href="javascript:myfun1();"> CONTACT ME</a>
+  <a href="javascript:close_win();">EXIT</a>
+</div>
+
+<div class="flex-container">
+  <div class="box">
+	<form action="javascript:k_p();" Id="forget">
+		<fieldset>
+			<legend>FORGOT PASSWORD</legend>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="unf">Username :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="text" id="unf" maxlength=8 placeholder="Username" required autofocus>
+    				</div>
+  			</div>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="scp">Security Phrase :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="text" id="scp" maxlength=5 placeholder="Security Phrase" required>
+    				</div>
+  			</div>
+			<div class="row">
+    				<div class="col-25">
+      					<label for="np">Password :</label>
+    				</div>
+    				<div class="col-75">
+      					<input type="password" id="np" maxlength=20 placeholder="New Password" required>
+    				</div>
+  			</div>
+			<div class="row">
+				<div class="button">
+    					<input type="submit" value="CHANGE PASSWORD">
+				</div>
+ 			</div>
+			<div class="row">
+    				<div class="navbar2">
+      					Already changed the password, <a class="link1" href="login.html">Login Here</a><br>
+					Want an account, <a class="link2" href="create.html">Register Here</a>
+    				</div>
+  			</div>
+		</fieldset>		
+	</form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("bg3.png");
+  background-attachment: fixed;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container .box {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top:2%;
+  width:70%;
+  font-size: 30px;
+  overflow:auto;
+}
+
+fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove brown;
+}
+
+legend {
+  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: none;
+  color:black;
+  font-size:40px;
+  text-align:center;
+}
+
+.col-25 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  text-align:center;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size:20px;
+}
+
+input[type=password] {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size:20px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align:center;
+  margin-top:1%;
+  font-size : 15px;
+}
+
+input[type=file] {
+  font-size : 20px;
+}
+
+.button {
+  text-align: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#dispimg {
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+  hidden:true;
+}
+
+.link1 {
+  font-size:20px; 
+  color:blue;
+}
+
+.link2 {
+  font-size:20px; 
+  color:blue;
+}
+
+.navbar2 {
+  margin-top: 2%;
+  width: 100%;
+  display:block;
+  overflow: auto;
+  font-size:20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+  .navbar2 a {
+    float: none;
+    display: block;
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+  }
+
+  .flex-container .box {
+    margin-left:10%;
+    margin-right: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    overflow:auto;
+  }
+
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+  }
+ 
+  input[type=submit] {
+    margin-top:5%;
+  }
+
+  input[type=file], input[type=password] {
+    width: 100%;
+  }
+
+  #dispimg {
+    margin-top:5%;
+  }
+}
