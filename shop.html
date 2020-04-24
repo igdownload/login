@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="ico.ico" type = "image/x-icon">
+<link rel="stylesheet" href="shop.css">
+<script type="text/javascript" src="shopjs.js"></script>
+<title>IG DOWNLOADS</title>
+</head>
+<body>
+
+<div class="sticky">
+<div class="navbar">
+  <img src="ico.ico">
+  <a href="shop.html">IG DOWNLOADS</a> 
+  <a href="html.html" id="welcome" title="Click to Go To Dashboard"></a>
+</div>
+
+<div class="back" onclick="javascript:go_back();"><</div>
+<div class="viewcart" onclick="javascript:show_cart();" title="Click to View Cart">View Cart</div>
+<div class="viewcart1" onclick="javascript:show_cart();" title="Click to View Cart">View<br> Cart </div>
+</div> <!--- sticky ends here-->
+
+<div class="flex-container">
+  <div class="box1" id="box1">
+	<div class="item">
+		<img src="app_1.png">
+		<div class="item-text">
+			<div class="h2p">LET US C SOLUTIONS</div>
+			Solutions to one of the most Popular Basic C Programming Language Book "Let Us C" by "Yashwant kanetkar". 
+		</div>
+		<input type="button" onclick="javascript:show(1);" value="Know More">
+	</div>
+
+	<div class="item">
+		<img src="app_2.png">
+		<div class="item-text">
+			<div class="h2p">PASSWORD STRENGTH CHECKER</div>
+			You should check the strength of your password using it.
+		</div>
+		<input type="button" onclick="javascript:show(2);" value="Know More">
+	</div>
+
+	<div class="item">
+		<img src="app_3.png">
+		<div class="item-text">
+			<div class="h2p">SOCCER 'C' GAME</div>
+			Getting Bored!<br>Try this "Just For Fun Game".
+		</div>
+		<input type="button" onclick="javascript:show(3);" value="Know More">
+	</div>
+
+	<div class="item">
+		<img src="app_4.png"> 
+		<div class="item-text">
+			<div class="h2p">EQUATIONS SOLVER</div>
+			Want to save the time in solving the equations during study??<br>Try this one and save your time.
+		</div>
+		<input type="button" onclick="javascript:show(4);" value="Know More">
+	</div>
+
+	<div class="itemd">
+		<img src="app_1.png">
+		<div class="itemd-text">
+			<div class="h2pd">LET US C SOLUTIONS</div>
+			"Let Us C" by "Yashwant kanetkar" is one of the most popular basic book for learning 'C' Programming Language.<br>It provides you the basic concepts required to build basic programs using a 'C' compiler. The book is provided with different exercises whose solutions are provided here. If you buy and download this book you will get the solutions in a 'C' file with Full working code.<br><br>* Full Working Codes<br>* Easy and simple language<br>* Clears Concept<br>* Freely Available<br>* Virus Free 
+		</div>
+		<input type="button" onclick="javascript:atc(0);" class="atcbtn" value="Add to Cart">
+	</div>
+
+	<div class="itemd">
+		<img src="app_2.png">
+		<div class="itemd-text">
+			<div class="h2pd">PASSWORD STRENGTH CHECKER</div>
+			Don't know whether your password is safe enough from getting hacked?<br>Check the strength of your password using this application developed using 'C' programming language.This is a safe, highly efficient and easy to use app. No password is gathered or stored using it.<br><br>* Easy to use<br>* Virus Free<br>* Free of cost<br>* Highly efficient<br>* High privacy<br>* Generates report about password
+		</div>
+		<input type="button" onclick="javascript:atc(1);" class="atcbtn" value="Add to Cart">
+	</div>
+
+	<div class="itemd">
+		<img src="app_3.png">
+		<div class="itemd-text">
+			<div class="h2pd">SOCCER 'C' GAME</div>
+			Getting bored at home? Want a safe, easy, and fun game to play?<br>This is the solution for your problem. This soccer game programmed in 'C' language. Give it a try now.<br><br>* Easy to use<br>* Virus Free<br>* Free of cost<br>* Fun Game
+		</div>
+		<input type="button" onclick="javascript:atc(2);" class="atcbtn" value="Add to Cart">
+	</div>
+
+	<div class="itemd">
+		<img src="app_4.png">
+		<div class="itemd-text">
+			<div class="h2pd">EQUATIONS SOLVER</div>
+			This Equations Solver is meant for those who want to save their time in solving various linear and quadratic equations.<br>Just select the type of equation, enter the coefficients and Get the Solution.<br><br>* Easy to use<br>* Virus Free<br>* Free of cost<br>* Highly efficient<br>* Menu driven<br>* Supports three types of equations<br> -> Linear equations in two variable<br> -> Linear Equations in three varriables<br> -> Quadratic Equations 
+		</div>
+		<input type="button" onclick="javascript:atc(3);" class="atcbtn" value="Add to Cart">
+	</div>
+	
+	<div class="cart">
+		<div class="h2c">YOUR CART</div>
+		<div id="ctab">
+		</div>
+		<div class="links" id="link">
+		<input type="button" onclick="javascript:get_links();" value="Get Links" class="getbtn">
+		</div>
+	</div>
+
+  </div>
+</div>
+
+<script>
+	check_login_status();
+</script>
+
+</body>
+</html>
