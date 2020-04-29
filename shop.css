@@ -54,7 +54,7 @@ body {
   overflow:auto;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .item {

@@ -1,7 +1,7 @@
 var u = window.localStorage.getItem('name');
 
-var arr = ["Let Us C Solutions","Password Strength Checker","Soccer 'C' Game","Equations Solver"];
-var links = ["Let Us C Solutions.zip","Password Strength Checker.zip","Soccer Game.zip","Equations Solver.zip"];
+var arr = ["Let Us C Solutions","Password Strength Checker","Soccer 'C' Game","Equations Solver","Matrix Rank Finder"];
+var links = ["Let Us C Solutions.zip","Password Strength Checker.zip","Soccer Game.zip","Equations Solver.zip","Matrix Rank Finder.zip"];
 
 function check_login_status()
 {
@@ -66,7 +66,7 @@ function hide_all()
 function go_back()
 {
 	hide_all();
-	document.getElementById('box1').style.justifyContent="space-between";
+	document.getElementById('box1').style.justifyContent="space-evenly";
 	var items= document.getElementsByClassName('item');
 	if(items[0].style.display=="none")
 	{
