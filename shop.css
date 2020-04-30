@@ -60,7 +60,7 @@ body {
 .item {
   display:block;
   margin-top:1%;
-  width:33%;
+  width:325px;
   text-align:center;
   border: 5px double black;
   overflow:auto;
