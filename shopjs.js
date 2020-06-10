@@ -1,7 +1,7 @@
 var u = window.localStorage.getItem('name');
 
 var arr = ["Let Us C Solutions","Password Strength Checker","Soccer 'C' Game","Equations Solver","Matrix Rank Finder","Chat App (Windows)"];
-var links = ["Let Us C Solutions.zip","Password Strength Checker.zip","Soccer Game.zip","Equations Solver.zip","Matrix Rank Finder.zip","https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1r9jjLUr7Eu0GFVT7X0026lDGOtg3mYVO"];
+var links = ["Let Us C Solutions.zip","Password Strength Checker.zip","Soccer Game.zip","Equations Solver.zip","Matrix Rank Finder.zip","https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1H6ZmjotYlTljuIjcCKZU1uhMObypQvi0"];
 
 function check_login_status()
 {
