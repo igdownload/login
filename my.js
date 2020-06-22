@@ -26,6 +26,49 @@ if(localStorage.getItem("imgData") === null)
 	var u = window.localStorage.getItem('name');	
 	var dataImage = localStorage.getItem('imgData1');	
 
+function get_news()
+{
+	let news = ["What's New Feature is now available","Tutorials feature will be available soon","Exit button has been removed due to security reasons","New Buttons to go to Shop and Tutorials section has been enabled post-login"];
+	let links = ["","","",""];
+	
+	let str="";
+
+	str += "<p class='heading'>What's New ? </p>";
+
+	for(let itr=0; itr < news.length; itr++)
+	{
+		if(links[itr]!="")
+		{
+			str += "<p class='news'><a href='"+links[itr]+"' target='_blank'>"+(itr+1)+". "+news[itr]+"</a></p>";
+		}
+		else
+		{
+			str += "<p class='news'>"+(itr+1)+". "+news[itr]+"</p>"; 
+		}
+	}
+
+	document.getElementById('newstext').innerHTML = str;
+}
+
+function whatsnew()
+{
+	get_news();
+	document.getElementById("newsdiv").style.display="block";
+	window.onclick = function(event){
+ 		if (document.getElementById('newstext').contains(event.target)){
+  		} else{
+			document.getElementById("newsdiv").style.display="none";
+  		}		
+	};
+}
+
+
+window.onload = function() {
+	whatsnew();
+};
+
+	
+
 function getBase64Image(img) {
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
@@ -413,10 +456,4 @@ function delete_all()
 function proc()
 {
 	alert("For deleting a Particular you need to login.\n\nProcess of deleting a single account is as follows:-\n\n\n   LOGIN --> MY PROFILE --> DELETE YOUR ACCOUNT --> CONFIRM");
-}
-
-function close_win()
-{
-	open("login.html","_self");
-	close();
 }
