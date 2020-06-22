@@ -33,6 +33,39 @@
   display: block;
   cursor:pointer;
 }
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
 </style>
 </head>
 <body background="bg1.png">
@@ -41,8 +74,9 @@
 	<img src="usr.png" id="fimg" alt="USER" class="dropimg" onclick="javascript:myfun();">
 	<div class="dropdown-content" id="d_c">
 		<a href="html.html">Dashboard</a>
-		<a href="shop.html">Shop</a>
 		<a href="modify.html">My Profile</a>
+		<a href="shop.html">Shop</a>
+		<a href="tutorials.html">Tutorials</a>
 		<a href="javascript:logout();">Logout</a>
 	</div>
 </div>
@@ -52,6 +86,7 @@
 <h1><center>WELCOME TO HTML</center></h1>
 <font size=6><p align="left">HTML stands for <font color="red">HYPER TEXT MARKUP LANGUAGE</font>. HTML is the standard markup language for documents designed to be displayed in a web browser.<br>HTML is easy to learn and quite powerful.</p>
 <p align="left">Due to its evolution nature, HTML undergoes certain versions, namely : - <br>* HTML 1.0<br>* HTML 2.0<br>* HTML 3.0<br>* HTML 3.2<br>* HTML 4.0<br>* XHTML 1.0<br>* HTML 5.0<br></p></font>
+<button class='btn-hover' type='button' onclick="location.href='shop.html'">Go to Shop</button>&nbsp;&nbsp;<button class='btn-hover' type='button' onclick="location.href='tutorials.html'">Go to Tutorials</button>
 <p style="font-size:15;">Download Link for <b>LET US C Solutions</b><br>
 <a href="download.html">Download Solutions</a><br>
 </p>  
