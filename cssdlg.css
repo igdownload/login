@@ -60,6 +60,29 @@
   margin-right:10%;
 }  
 
+#newstext {
+  overflow: auto;
+}
+
+.news {
+ padding:5px;
+ font-size:20px;
+ margin-left: 2%;
+ text-align: center;
+}
+
+.heading {
+ position:sticky;
+ top: 0px;
+ background: white;
+ font-weight: 800;
+ font-size:35px;
+ padding:10px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ color: red;
+ text-align: center;
+}
 
 @media screen and (max-width: 700px) {
 
