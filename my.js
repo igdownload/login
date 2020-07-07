@@ -28,8 +28,8 @@ if(localStorage.getItem("imgData") === null)
 
 function get_news()
 {
-	let news = ["The feature of sending image & Files in Chat-Application has been implemented","What's New Feature is now available","Tutorials feature will be available soon","Exit button has been removed due to security reasons","New Buttons to go to Shop and Tutorials section has been enabled post-login"];
-	let links = ["https://igdownload.github.io/chat","","","",""];
+	let news = ["The feature of typing notification and more emojis in Chat-Application is live now","The feature of sending image & Files in Chat-Application has been implemented","What's New Feature is now available","Tutorials feature will be available soon","Exit button has been removed due to security reasons","New Buttons to go to Shop and Tutorials section has been enabled post-login"];
+	let links = ["https://igdownload.github.io/chat","https://igdownload.github.io/chat","","","",""];
 	
 	let str="";
 
