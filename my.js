@@ -340,7 +340,7 @@ function get_data()
 
 	if(u==null)
 	{
-		window.open("login.html","_self");
+		window.open("login.html?modify.html","_self");
 	}
 	
 	for(i=0;i<usr.length;i++)
