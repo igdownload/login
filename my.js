@@ -28,8 +28,8 @@ if(localStorage.getItem("imgData") === null)
 
 function get_news()
 {
-	let news = ["The feature of replying and deleting a particular message has been deployed in chat application","The feature of typing notification and more emojis in Chat-Application is live now","The feature of sending image & Files in Chat-Application has been implemented","What's New Feature is now available","Tutorials feature will be available soon","Exit button has been removed due to security reasons","New Buttons to go to Shop and Tutorials section has been enabled post-login"];
-	let links = ["https://igdownload.github.io/chat","https://igdownload.github.io/chat","https://igdownload.github.io/chat","","","",""];
+	let news = ["The feature of sending image in Chat-Application has been implemented","What's New Feature is now available","Tutorials feature will be available soon","Exit button has been removed due to security reasons","New Buttons to go to Shop and Tutorials section has been enabled post-login"];
+	let links = ["https://igdownload.github.io/chat","","","",""];
 	
 	let str="";
 
@@ -107,7 +107,17 @@ function validate()
 			window.localStorage.setItem('name',u);
 			window.localStorage.setItem('imgData1',z);
 			alert("LOGIN SUCCESSFUL");
-			window.open("html.html","_self");
+			var link_query_url = location.search;
+			link_query_url = link_query_url.slice(1);
+			console.log(link_query_url);
+			if(link_query_url=="")
+			{
+				window.open("html.html","_self");
+			} 
+			else
+			{
+				window.open(link_query_url,"_self");	
+			}
 			break;
 		}
 	}
