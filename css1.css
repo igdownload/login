@@ -210,6 +210,14 @@ input[type=submit]:hover {
   overflow: auto;
 }
 
+#cptcha {
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  height: 50px;
+  border: 1px solid #000000;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
