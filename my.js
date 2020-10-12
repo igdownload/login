@@ -1,3 +1,4 @@
+var cpt=0;
 if (localStorage.getItem("pwd") === null) 
 {
 	var usr = ["admin"];
@@ -62,9 +63,32 @@ function whatsnew()
 	};
 }
 
+function generateCaptcha()
+{
+	cpt = 0;
+	for(let i=1;i<=6;i+=1)
+	{
+		cpt = cpt*10 + Math.floor(1 + Math.random() * 9);
+	}
+	// console.log(cpt);
+	var canvas = document.getElementById("cptcha");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#000000";
+	ctx.fillRect(0,0,1000,1000);
+	ctx.font = "70px Comic Sans MS";
+	ctx.fillStyle = "white";
+	ctx.textAlign = "center";
+	ctx.fillText(cpt.toString(), canvas.width/2, 2*canvas.height/3);
+	ctx.strokeStyle = "#FF0000";
+	ctx.lineWidth = 8;
+	ctx.moveTo(0, canvas.height/2);
+	ctx.lineTo(canvas.width, canvas.height/2);
+	ctx.stroke();
+}
 
 window.onload = function() {
 	whatsnew();
+	generateCaptcha();
 };
 
 	
@@ -84,6 +108,14 @@ function getBase64Image(img) {
 
 function validate()
 {
+	var cptuin = document.getElementById('cptuserin').value;
+	if(cptuin!=cpt)
+	{
+		alert("INVALID CAPTCHA. RETRY.");
+		generateCaptcha();
+		document.getElementById('cptuserin').value = "";
+		return;
+	}
 	var x = document.getElementById("un").value;
 	var y = document.getElementById("pwd").value;
 	var usr = JSON.parse(window.localStorage.getItem('usr'));
