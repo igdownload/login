@@ -65,20 +65,24 @@ function whatsnew()
 
 function generateCaptcha()
 {
+	var canvas = document.getElementById("cptcha");
+	var ctx = canvas.getContext("2d");
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.beginPath();
+	ctx.fillStyle = "#000000";
+	ctx.fillRect(0,0,canvas.width,canvas.height);
+	ctx.font = "70px Comic Sans MS";
+	ctx.fillStyle = "white";
 	cpt = 0;
 	for(let i=1;i<=6;i+=1)
 	{
-		cpt = cpt*10 + Math.floor(1 + Math.random() * 9);
+		var a = Math.floor(1 + Math.random() * 9);
+		var p = Math.random() * 0.2;
+		cpt = cpt*10 + a;
+		ctx.setTransform(1, p, -p, 1, 0, 0);
+		ctx.fillText(a.toString(), 20+(i-1)*40, 2*canvas.height/3);
 	}
 	// console.log(cpt);
-	var canvas = document.getElementById("cptcha");
-	var ctx = canvas.getContext("2d");
-	ctx.fillStyle = "#000000";
-	ctx.fillRect(0,0,1000,1000);
-	ctx.font = "70px Comic Sans MS";
-	ctx.fillStyle = "white";
-	ctx.textAlign = "center";
-	ctx.fillText(cpt.toString(), canvas.width/2, 2*canvas.height/3);
 	ctx.strokeStyle = "#FF0000";
 	ctx.lineWidth = 8;
 	ctx.moveTo(0, canvas.height/2);
