@@ -1,7 +1,7 @@
 var u = window.localStorage.getItem('name');
 
-var arr = ["Let Us C Solutions","Password Strength Checker","Soccer 'C' Game","Equations Solver","Matrix Rank Finder","Chat App (Windows)","Automatic Mouse Alphabet Writer"];
-var links = ["Let Us C Solutions.zip","Password Strength Checker.zip","Soccer Game.zip","Equations Solver.zip","Matrix Rank Finder.zip","Chat App.zip","alphabetWriter_pyautogui.zip"];
+var arr = ["Let Us C Solutions","Password Strength Checker","Soccer 'C' Game","Equations Solver","Matrix Rank Finder","Chat App (Windows)","Automatic Mouse Alphabet Writer","Tic-Tac-Toe (Android)","Chat App (Android)"];
+var links = ["Let Us C Solutions.zip","Password Strength Checker.zip","Soccer Game.zip","Equations Solver.zip","Matrix Rank Finder.zip","Chat App.zip","alphabetWriter_pyautogui.zip","tictactoe_android.zip","chat_app_android.zip"];
 
 function check_login_status()
 {
