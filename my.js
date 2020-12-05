@@ -29,12 +29,12 @@ if(localStorage.getItem("imgData") === null)
 
 function get_news()
 {
-	let news = ["The feature of sending image in Chat-Application has been implemented","What's New Feature is now available","Tutorials feature will be available soon","Exit button has been removed due to security reasons","New Buttons to go to Shop and Tutorials section has been enabled post-login"];
-	let links = ["https://igdownload.github.io/chat","","","",""];
+	let news = ["New igNotePad application is launched in shop","Bug fix update for Tic Tac Toe (Android) is available now","Captcha has been implemented as an extra security measure","Tic-Tac-Toe game (Web Version) has been launched"];
+	let links = ["https://igdownload.github.io/login/shop","https://igdownload.github.io/login/shop","","https://igdownload.github.io/tictactoemp"];
 	
 	let str="";
 
-	str += "<p class='heading'>What's New ? </p>";
+	str += "<p class='heading'>What's New ? <a href='#' onclick=\"document.getElementById('newsdiv').style.display='none';\">&times;</a></p>";
 
 	for(let itr=0; itr < news.length; itr++)
 	{
@@ -160,6 +160,7 @@ function validate()
 	
 	if(flag==0)
 	{
+		generateCaptcha();
 		alert("INVALID CREDENTIALS. RETRY.");
 	}
 
