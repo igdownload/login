@@ -29,8 +29,8 @@ if(localStorage.getItem("imgData") === null)
 
 function get_news()
 {
-	let news = ["New igNotePad application is launched in shop","Bug fix update for Tic Tac Toe (Android) is available now","Captcha has been implemented as an extra security measure","Tic-Tac-Toe game (Web Version) has been launched"];
-	let links = ["https://igdownload.github.io/login/shop","https://igdownload.github.io/login/shop","","https://igdownload.github.io/tictactoemp"];
+	let news = ["New ilNotePad application is launched in shop","Bug fix update for Tic Tac Toe (Android) is available now","Captcha has been implemented as an extra security measure","Tic-Tac-Toe game (Web Version) has been launched"];
+	let links = ["https://il-coder.github.io/login/shop","https://il-coder.github.io/login/shop","","https://il-coder.github.io/tictactoemp"];
 	
 	let str="";
 
