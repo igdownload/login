@@ -273,7 +273,7 @@ input[type=submit]:hover {
   border-left: 0px groove red;
   border-right: 0px groove red;
   margin:0px;
-  z-index:0
+  z-index:0;
   position:absolute;
   width:100%;
   height:0%;
