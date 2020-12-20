@@ -97,10 +97,11 @@
 		<div class="overlay" onclick="javascript:upload_image();" style="text-decoration:none; color: #a607f5; font-weight: 600;">Change Picture</div>
 	</div>
 	</center>
-	<br><img src="" hidden id="usrimg2">
-	<p align="center"><font size=5 color="blue">Username<span style="display:inline-block; width: 62;"></span>: <input style="font-size: 20;" type="text" maxlength=8 Id="unp" 	placeholder="Username" required autofocus></font></p>
+  <br><img src="" hidden id="usrimg2">
+  <p align="center"><font size=5 color="blue">Profile Name<span style="display:inline-block; width: 28  ;"></span>: <input style="font-size: 20;" type="text" maxlength=20 Id="sName" 	placeholder="Profile Name" required autofocus></font></p>
+	<p align="center"><font size=5 color="blue">Username<span style="display:inline-block; width: 59;"></span>: <input style="font-size: 20;" type="text" maxlength=8 Id="unp" title="Alphanumeric, '.' & '_' Only" pattern="[A-Za-z0-9._]+"	placeholder="Username" required autofocus></font></p>
 	<p align="center"><font size=5 color="blue">Password<span style="display:inline-block; width: 64;"></span>: <input style="font-size: 20;" type="password" maxlength=20 Id="pwdp" 	placeholder="Passwords" required></font></p>
-	<p align="center"><font size=5 color="blue">Security Phrase   : <input style="font-size: 20;" type="text" maxlength=5 Id="spp" placeholder="Security Phrase" required></font></p><br>
+	<p align="center"><font size=5 color="blue">Security Phrase   : <input style="font-size: 20;" type="text" maxlength=8 Id="spp" placeholder="Security Phrase" required></font></p><br>
 	<input type="file" accept="image/*" Id="upusrimgp" onchange="readURL1(this);" hidden></font><br>
 	<center><div style="position:relative; padding-bottom:5%;">
 		<button Id="sub" type="submit" style="cursor:pointer; color:white; background-color:blue; font-size: 25px;">SAVE CHANGES</button><br><br>

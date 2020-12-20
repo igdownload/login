@@ -5,16 +5,24 @@ if (localStorage.getItem("pwd") === null)
 	var pwd = ["admin001"];
 	var strData=["default"];
 	var secPhr=["admin"];
+	var pName = ["Admin"];
 	window.localStorage.setItem('usr', JSON.stringify(usr));
 	window.localStorage.setItem('pwd', JSON.stringify(pwd));
 	window.localStorage.setItem('imgData', JSON.stringify(strData));
 	window.localStorage.setItem('sph', JSON.stringify(secPhr));
+	window.localStorage.setItem('pName', JSON.stringify(pName));
 }
 
 if(localStorage.getItem("sph") === null) 
 {
 	var secPhr=["admin"];
 	window.localStorage.setItem('sph', JSON.stringify(secPhr));
+}
+
+if(localStorage.getItem("pName") === null) 
+{
+	var pName=["Admin"];
+	window.localStorage.setItem('pName', JSON.stringify(pName));
 }
 
 if(localStorage.getItem("imgData") === null) 
@@ -24,7 +32,8 @@ if(localStorage.getItem("imgData") === null)
 }
 
 	var i,flag=0,flag1=0,j,flag2=0;
-	var u = window.localStorage.getItem('name');	
+	var u = window.localStorage.getItem('name');
+	var sName = window.localStorage.getItem('sName');
 	var dataImage = localStorage.getItem('imgData1');	
 
 function get_news()
@@ -125,6 +134,7 @@ function validate()
 	var usr = JSON.parse(window.localStorage.getItem('usr'));
 	var pwd = JSON.parse(window.localStorage.getItem('pwd'));
 	var strData = JSON.parse(window.localStorage.getItem('imgData'));
+	var pName = JSON.parse(window.localStorage.getItem('pName'));
 	flag=0;
 	for(i=0;i<usr.length;i++)
 	{
@@ -141,6 +151,7 @@ function validate()
 				var z = "default";
 			}
 			window.localStorage.setItem('name',u);
+			window.localStorage.setItem('sName',pName[i]);
 			window.localStorage.setItem('imgData1',z);
 			alert("LOGIN SUCCESSFUL");
 			var link_query_url = location.search;
@@ -213,10 +224,12 @@ function create_ac()
 	var x = document.getElementById("un").value;
 	var y = document.getElementById("pwd").value;
 	var z = document.getElementById("sp").value;
+	var w = document.getElementById("pName").value;
 	var usr = JSON.parse(window.localStorage.getItem('usr'));
 	var pwd = JSON.parse(window.localStorage.getItem('pwd'));
 	var strData = JSON.parse(window.localStorage.getItem('imgData'));
 	var secPhr = JSON.parse(window.localStorage.getItem('sph'));
+	var pName = JSON.parse(window.localStorage.getItem('pName'));
 	flag=0;
 	alert("Please Ensure You have entered the username and password above.");
 	for(i=0;i<usr.length;i++)
@@ -233,9 +246,11 @@ function create_ac()
 	{
 		usr[usr.length]=x;
 		pwd[pwd.length]=y;
+		pName[pName.length]=w;
 		secPhr[pwd.length-1]=z;
 		window.localStorage.setItem('usr', JSON.stringify(usr));
 		window.localStorage.setItem('pwd', JSON.stringify(pwd));
+		window.localStorage.setItem('pName', JSON.stringify(pName));
 		window.localStorage.setItem('sph', JSON.stringify(secPhr));
 		var bannerImage = document.getElementById('usrimg');
 		var imgData = getBase64Image(bannerImage);
@@ -291,6 +306,7 @@ function logout()
 {
 	window.sessionStorage.removeItem('name');
 	window.localStorage.removeItem('name');
+	window.localStorage.removeItem('sName');
 	window.localStorage.removeItem('imgData1');
 	window.open("login.html","_self");
 }
@@ -305,7 +321,7 @@ function check_login()
 
 function logged_name()
 {
-	document.getElementById("welcome").innerHTML = "Welcome " + u + " ";
+	document.getElementById("welcome").innerHTML = "Welcome " + sName + " ";
 	if(u==null)
 	{
 		document.getElementById("ht").innerHTML = "<span style='display:block; text-align:center; font-size: 50; color:blue;'>You are logged out. Login again to continue.</span>";
@@ -323,6 +339,7 @@ function modify_p()
 	var pwd = JSON.parse(window.localStorage.getItem('pwd'));
 	var strData = JSON.parse(window.localStorage.getItem('imgData'));
 	var secPhr = JSON.parse(window.localStorage.getItem('sph'));
+	var pName = JSON.parse(window.localStorage.getItem('pName'));
 
 	for(i=0;i<usr.length;i++)
 	{
@@ -335,6 +352,7 @@ function modify_p()
 	var t=document.getElementById('unp').value;
 	var v=document.getElementById('pwdp').value;
 	var w=document.getElementById('spp').value;
+	var x=document.getElementById('sName').value;
 		
 	for(j=0;j<usr.length;j++)
 	{
@@ -350,9 +368,11 @@ function modify_p()
 		usr[i]=t;
 		pwd[i]=v;
 		secPhr[i]=w;
+		pName[i] = x;
 	
 		window.localStorage.setItem('usr', JSON.stringify(usr));
 		window.localStorage.setItem('pwd', JSON.stringify(pwd));
+		window.localStorage.setItem('pName', JSON.stringify(pName));
 		window.localStorage.setItem('sph', JSON.stringify(secPhr));
 		var bannerImage = document.getElementById('usrimg2');
 		var imgData = getBase64Image(bannerImage);
@@ -374,6 +394,7 @@ function get_data()
 	var pwd = JSON.parse(window.localStorage.getItem('pwd'));
 	var strData = JSON.parse(window.localStorage.getItem('imgData'));
 	var secPhr = JSON.parse(window.localStorage.getItem('sph'));
+	var pName = JSON.parse(window.localStorage.getItem('pName'));
 
 	if(u==null)
 	{
@@ -395,7 +416,9 @@ function get_data()
 
 	var v = pwd[i];
 	var w = secPhr[i];
-	
+	var x = pName[i];
+
+	document.getElementById('sName').value=x;
 	document.getElementById('unp').value=u;
 	document.getElementById('pwdp').value=v;
 	document.getElementById('spp').value=w;
@@ -452,6 +475,7 @@ function delete_acc()
 	var pwd = JSON.parse(window.localStorage.getItem('pwd'));
 	var strData = JSON.parse(window.localStorage.getItem('imgData'));
 	var secPhr = JSON.parse(window.localStorage.getItem('sph'));
+	var pName = JSON.parse(window.localStorage.getItem('pName'));
 
 	for(i=0;i<usr.length;i++)
 	{
@@ -466,12 +490,14 @@ function delete_acc()
 		usr.splice(i,1);		
 		pwd.splice(i,1);
 		strData.splice(i,1);
-		secPhr.splice(i,1);		
+		secPhr.splice(i,1);
+		pName.splice(i,1);		
 
 		window.localStorage.setItem('usr', JSON.stringify(usr));
 		window.localStorage.setItem('pwd', JSON.stringify(pwd));
 		window.localStorage.setItem('sph', JSON.stringify(secPhr));
 		window.localStorage.setItem("imgData", JSON.stringify(strData));
+		window.localStorage.setItem("pName", JSON.stringify(pName));
 		alert("Account Deleted Successfully.\nKindly use this software again.");
 		logout();
 	}
@@ -489,6 +515,7 @@ function delete_all()
 		window.localStorage.removeItem('pwd');
 		window.localStorage.removeItem('sph');
 		window.localStorage.removeItem('imgData');
+		window.localStorage.removeItem('pName');
 		alert("All Accounts Deleted Successfully.\nKindly use this software again.");
 		logout();
 		window.open("login.html","_self");

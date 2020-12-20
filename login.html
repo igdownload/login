@@ -51,7 +51,7 @@ check_login();
       					<label for="un">Username :</label>
     				</div>
     				<div class="col-75">
-      					<input type="text" id="un" maxlength=8 placeholder="Username" required autofocus>
+      					<input type="text" id="un" maxlength=8 title="Alphanumeric, '.' & '_' Only" pattern="[A-Za-z0-9._]+" placeholder="Username" required autofocus>
     				</div>
   			</div>
 			<div class="row">
@@ -68,7 +68,7 @@ check_login();
 							<button type="button" onclick="javascript:generateCaptcha();" style="font-size: 20px; transform: translateY(-50%);">&#10227;</button>
 					</div>
 					<div class="col-75">
-							<input type="text" id="cptuserin" maxlength=6 placeholder="Enter captcha" required>
+							<input type="text" id="cptuserin" title="6 Digit Numbers Only" pattern="[0-9]{6}" maxlength=6 placeholder="Enter captcha" required>
 					</div>
 		  	</div>
 			<div class="row">

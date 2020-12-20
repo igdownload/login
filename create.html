@@ -39,11 +39,19 @@ check_login();
 		<fieldset>
 			<legend>REGISTER</legend>
 			<div class="row">
+				<div class="col-25">
+					  <label for="pName">Profile Name* :</label>
+				</div>
+				<div class="col-75">
+					  <input type="text" id="pName" maxlength=20 placeholder="Profile Name" required autofocus>
+				</div>
+		  		</div>
+			<div class="row">
     				<div class="col-25">
       					<label for="un">Username* :</label>
     				</div>
     				<div class="col-75">
-      					<input type="text" id="un" maxlength=8 placeholder="Username" required autofocus>
+      					<input type="text" id="un" title="Alphanumeric, '.' & '_' Only" pattern="[A-Za-z0-9._]+" maxlength=8 placeholder="Username" required autofocus>
     				</div>
   			</div>
 			<div class="row">
@@ -59,7 +67,7 @@ check_login();
       					<label for="sp">Security Phrase* :</label>
     				</div>
     				<div class="col-75">
-      					<input type="text" id="sp" maxlength=5 placeholder="Security Phrase" required>
+      					<input type="text" id="sp" maxlength=8 placeholder="Security Phrase" required>
     				</div>
   			</div>
 			<div class="row">

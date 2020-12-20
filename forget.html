@@ -43,7 +43,7 @@ check_login();
       					<label for="unf">Username :</label>
     				</div>
     				<div class="col-75">
-      					<input type="text" id="unf" maxlength=8 placeholder="Username" required autofocus>
+      					<input type="text" id="unf" title="Alphanumeric, '.' & '_' Only" pattern="[A-Za-z0-9._]+" maxlength=8 placeholder="Username" required autofocus>
     				</div>
   			</div>
 			<div class="row">
@@ -51,12 +51,12 @@ check_login();
       					<label for="scp">Security Phrase :</label>
     				</div>
     				<div class="col-75">
-      					<input type="text" id="scp" maxlength=5 placeholder="Security Phrase" required>
+      					<input type="text" id="scp" maxlength=8 placeholder="Security Phrase" required>
     				</div>
   			</div>
 			<div class="row">
     				<div class="col-25">
-      					<label for="np">Password :</label>
+      					<label for="np">New Password :</label>
     				</div>
     				<div class="col-75">
       					<input type="password" id="np" maxlength=20 placeholder="New Password" required>
